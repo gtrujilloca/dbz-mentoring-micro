@@ -17,13 +17,19 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@softarc/native-federation-node": "^2.0.10",
+    "es-module-shims": "^1.5.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.19",
     "@angular/cli": "^18.0.7",
     "@angular/compiler-cli": "^18.0.0",
-    "typescript": "~5.4.2"
+    "ng-packagr": "^18.2.0",
+    "typescript": "~5.4.2",
+    "@angular-architects/native-federation": "^19.0.22"
+
   }
 }
