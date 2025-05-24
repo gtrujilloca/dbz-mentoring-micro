@@ -7,4 +7,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `<button>Button dbz organisms</button>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DbzButtonComponent { }
+export class DbzButtonComponent {}

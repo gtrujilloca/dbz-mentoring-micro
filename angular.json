@@ -60,6 +60,15 @@
 						"port": 0
 					}
 				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": [
+							"projects/shell/src/**/*.ts",
+							"projects/shell/src/**/*.html"
+						]
+					}
+				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n"
 				},
@@ -181,6 +190,15 @@
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 0
+					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": [
+							"projects/mf-characters/src/**/*.ts",
+							"projects/mf-characters/src/**/*.html"
+						]
 					}
 				},
 				"extract-i18n": {
@@ -306,6 +324,15 @@
 						"port": 0
 					}
 				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": [
+							"projects/mf-planets/src/**/*.ts",
+							"projects/mf-planets/src/**/*.html"
+						]
+					}
+				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n"
 				},
@@ -400,6 +427,15 @@
 						"polyfills": [
 							"zone.js",
 							"zone.js/testing"
+						]
+					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": [
+							"projects/dbz-design-lib/src/**/*.ts",
+							"projects/dbz-design-lib/src/**/*.html"
 						]
 					}
 				}

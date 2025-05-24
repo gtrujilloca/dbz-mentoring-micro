@@ -1,5 +1,9 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
+import {
+  provideRouter,
+  withViewTransitions,
+  withComponentInputBinding,
+} from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withFetch } from '@angular/common/http';
@@ -9,5 +13,5 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withViewTransitions(), withComponentInputBinding()),
     provideHttpClient(withFetch()),
-  ]
+  ],
 };

@@ -5,7 +5,9 @@
   "compilerOptions": {
     "paths": {
       "dbz-design-lib": [
-        "./dist/dbz-design-lib"
+        // "./dist/dbz-design-lib"
+        // "./projects/dbz-design-lib",
+        "./projects/dbz-design-lib/src/public-api.ts"
       ]
     },
     "outDir": "./dist/out-tsc",

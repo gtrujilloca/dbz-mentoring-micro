@@ -5,10 +5,10 @@ import { DbzButtonComponent } from 'dbz-design-lib';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DbzButtonComponent ],
+  imports: [RouterOutlet, DbzButtonComponent],
   providers: [],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <h1>Welcome to {{ title }}!</h1>
     <dbz-button />
 
     <router-outlet />
