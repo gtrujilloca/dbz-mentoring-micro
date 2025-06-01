@@ -1,11 +1,21 @@
-import { Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/native-federation';
+import { Routes } from '@angular/router';
+import HomeComponent from './components/home/home.component';
+import NotFoundPageComponent from './pages/not-found.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'characters',
+    redirectTo: 'home',
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'not-found',
+    component: NotFoundPageComponent,
   },
   {
     path: 'characters',
@@ -13,7 +23,7 @@ export const routes: Routes = [
       loadRemoteModule({
         remoteName: 'mfCharacters',
         exposedModule: './Component',
-      }).then(module => module.AppComponent),
+      }),
   },
   {
     path: 'planets',
@@ -21,11 +31,11 @@ export const routes: Routes = [
       loadRemoteModule({
         remoteName: 'mfPlanets',
         exposedModule: './Component',
-      }).then(module => module.AppComponent),
+      }),
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'not-found',
     pathMatch: 'full',
   },
 ];

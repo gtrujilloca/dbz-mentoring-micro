@@ -1,0 +1,33 @@
+@import url('./vars.constants.css');
+
+.bg-orange {
+  background-color: var(--db-orange);
+}
+
+.bg-blue {
+  background-color: var(--db-blue);
+}
+
+.bg-yellow {
+  background-color: var(--db-yellow);
+}
+
+.bg-red {
+  background-color: var(--db-red);
+}
+
+.bg-gray-dark {
+  background-color: var(--db-gray-dark);
+}
+
+.bg-gray-light {
+  background-color: var(--db-gray-light);
+}
+
+.bg-white {
+  background-color: var(--db-white);
+}
+
+.bg-black {
+  background-color: var(--db-black);
+}

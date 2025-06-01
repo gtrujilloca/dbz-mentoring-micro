@@ -1,12 +1,13 @@
 import { NgClass } from '@angular/common';
 import {
+  booleanAttribute,
   ChangeDetectionStrategy,
   Component,
-  input,
-  output,
   computed,
-  booleanAttribute,
+  inject,
+  input,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   ButtonSize,
   ButtonType,
@@ -19,25 +20,29 @@ import {
 } from '@dbz-lib/shared/utils';
 
 @Component({
-  selector: 'dbz-button',
+  selector: 'dbz-link',
   standalone: true,
   imports: [NgClass],
   template: `
-    <button
+    <a
       [ngClass]="classes()"
-      [disabled]="disabled()"
-      (click)="clickAction.emit()">
+      (click)="navigate()"
+      (keyup.enter)="navigate()"
+      tabindex="0">
       <span class="text">{{ text() }}</span>
       @if (hasIconProjection()) {
         <span class="icon"><ng-content /></span>
       }
-    </button>
+    </a>
   `,
-  styleUrl: './button.component.css',
+  styleUrl: './link.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DbzButtonComponent {
+export class DbzLinkComponent {
+  router = inject(Router);
   text = input('');
+  href = input('');
+  params = input<Record<string, string>>({});
 
   disabled = input(false, { transform: booleanAttribute });
   hasIconProjection = input(false, { transform: booleanAttribute });
@@ -45,8 +50,6 @@ export class DbzButtonComponent {
   type = input<ButtonType>('primary');
   size = input<ButtonSize>('sm');
   weight = input<ButtonWeight>('normal');
-
-  clickAction = output();
 
   classes = computed(() => {
     const size = getButtonSizeByType(this.size());
@@ -60,4 +63,8 @@ export class DbzButtonComponent {
 
     return `${baseClass} ${hasIconProjection} ${size} ${type} ${weight} ${disabled}`;
   });
+
+  navigate() {
+    this.router.navigate([this.href(), this.params()]);
+  }
 }

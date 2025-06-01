@@ -1,0 +1,40 @@
+@import url('../../../../../../shell/src/app/shared/styles/base.styles.css');
+
+button {
+  container-type: inline-size;
+  min-width: 3rem;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text {
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: var(--weight-semibold);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @container (max-width: 7rem) {
+    .text {
+      margin: auto;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  @container (max-width: 3rem) {
+    .text {
+      display: none;
+    }
+
+    .icon {
+      display: flex;
+      margin: auto;
+    }
+  }
+}

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('./app/shared/styles/base.styles.css');
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--db-gray-dark);
+  color: var(--db-white);
+  padding: var(--spacing-lg);
+}

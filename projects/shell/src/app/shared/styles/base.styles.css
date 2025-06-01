@@ -1,0 +1,92 @@
+@import url('./reset.styles.css');
+@import url('./vars.constants.css');
+@import url('./text.styles.css');
+@import url('./spaces.styles.css');
+@import url('./flex.styles.css');
+@import url('./grid.styles.css');
+@import url('./sizes.styles.css');
+@import url('./utils.styles.css');
+@import url('./background.style.css');
+
+.btn {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    background-color: var(--db-yellow);
+  }
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-primary {
+  background-color: var(--db-orange);
+  color: var(--db-white);
+
+  &:hover {
+    background-color: var(--db-yellow);
+    color: var(--db-black);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--db-blue);
+  color: var(--db-white);
+
+  &:hover {
+    background-color: #24548e;
+  }
+}
+
+.btn-tertiary {
+  background-color: var(--db-gray-light);
+  color: var(--db-black);
+
+  &:hover {
+    background-color: var(--db-white);
+  }
+}
+
+.btn-danger {
+  background-color: var(--db-red);
+  color: var(--db-white);
+
+  &:hover {
+    background-color: #a22032;
+  }
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 2px solid var(--db-orange);
+  color: var(--db-orange);
+
+  &:hover {
+    background-color: var(--db-orange);
+    color: var(--db-white);
+  }
+}
+
+.card {
+  background-color: var(--db-blue);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-fast);
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}

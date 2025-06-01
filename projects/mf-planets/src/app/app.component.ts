@@ -12,6 +12,6 @@ import { RouterOutlet } from '@angular/router';
   `,
   styles: [],
 })
-export class AppComponent {
+export default class AppComponent {
   title = 'mf-planets';
 }
