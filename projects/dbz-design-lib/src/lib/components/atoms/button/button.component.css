@@ -1,4 +1,4 @@
-@import url('../../../../../../shell/src/app/shared/styles/base.styles.css');
+@import url('../../../shared/styles/base-styles.css');
 
 button {
   container-type: inline-size;
