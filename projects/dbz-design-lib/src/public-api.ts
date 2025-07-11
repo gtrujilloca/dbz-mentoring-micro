@@ -1,4 +1,4 @@
 /*
  * Public API Surface of dbz-design-lib
  */
-export * from './lib/components/atoms';
+export * from '@dbz-lib/components/atoms';

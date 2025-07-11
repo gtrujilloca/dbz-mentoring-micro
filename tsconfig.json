@@ -4,17 +4,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@dbz-lib/*": [
-        // "./dist/dbz-lib"
-        // "./projects/dbz-lib",
-        "./projects/dbz-design-lib/src/lib/*"
-      ],
       "dbz-design-lib": [
-        // "./dist/dbz-design-lib"
-        // "./projects/dbz-design-lib",
-        "./projects/dbz-design-lib/src/public-api.ts",
-      ]
+        "projects/dbz-design-lib/src/public-api.ts"
+      ],
+      "@dbz-lib/*": [
+        "projects/dbz-design-lib/src/lib/*"
+      ],
     },
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

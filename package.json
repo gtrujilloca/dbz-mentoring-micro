@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node resolve-dist-paths.js",
+    "resolve-paths": "tsc-alias -p tsconfig.json --outDir dist/$npm_config_name",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
@@ -42,6 +43,7 @@
     "ng-packagr": "^18.2.0",
     "prettier": "^3.5.3",
     "prettier-eslint": "^16.4.2",
+    "tsc-alias": "^1.8.16",
     "typescript": "~5.4.2",
     "typescript-eslint": "8.32.0"
   }
